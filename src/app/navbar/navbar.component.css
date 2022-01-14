@@ -1,0 +1,10 @@
+nav {
+    font-family: sans-serif;
+}
+
+img {
+    height: 2.5rem;
+    background-color: white;
+    border-radius: 50%;
+    margin:0 0.5rem;
+}

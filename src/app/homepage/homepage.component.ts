@@ -10,10 +10,11 @@ import { UsersService } from '../services/users-services';
 export class HomepageComponent implements OnInit {
 
   userData: any = []
-  userName = "engineer237"
-  isFetching = false
   myRepoData: any = []
 
+  userName = "engineer237"
+  isFetching = false
+  error = null
   constructor(
     private userService : UsersService,
     private repoService : RespositoriesService
@@ -27,6 +28,8 @@ export class HomepageComponent implements OnInit {
         this.isFetching = true
         console.log("my repo", data)
       }, err => {
+        this.isFetching = false
+        this.error = err.message
         console.log("error", err.message)
       }
     )

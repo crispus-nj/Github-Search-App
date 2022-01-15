@@ -20,10 +20,10 @@
                         <div>public_repos: <i>{{user.public_repos}}</i></div>
                     
                     </div>
-                    <h4 class="following mt-3 text-center text-success" >MY REPOSITORIES</h4>
+                    <h4 class="following mt-3 text-center text-success" style="font-weight: bold;" >MY REPOSITORIES</h4>
                     <div class="repos">
                         <ul *ngFor = "let repos of myRepoData" style="display: inline-block;">
-                            <a href="{{repos.homepage}}" style="text-decoration: none;">{{repos.name}}</a> 
+                            <a href="{{repos.clone_url}}" id="repos" style="text-decoration: none;">{{repos.name}}</a> <br />
                          </ul>
                     </div>
                     
@@ -33,10 +33,14 @@
             <!-- {{myRepoData}} -->
         </div>
     </div>
-    <div class="col-md-3" *ngIf="!isFetching">
+    <div class="col-md-3" *ngIf="!isFetching && !error">
         <div class="spinner-border mt-3" role="status">
             <span class="sr-only"></span>
         </div>
+    </div>
+    <div class="alert alert-danger" *ngIf="error">
+        <h1>Error Occured</h1>
+        <p>{{error}}</p>
     </div>
 </div>
 <app-users></app-users>

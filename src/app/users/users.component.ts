@@ -7,11 +7,11 @@ import { UsersService } from '../services/users-services';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-
+  users: any = []
   @ViewChild('form') signup: ElementRef
 
   constructor(
-    private userService : UsersService
+    private userService: UsersService
   ) { }
 
   ngOnInit(): void {
@@ -21,7 +21,8 @@ export class UsersComponent implements OnInit {
   }
   getRepos(user: any) {
     this.userService.getUser(user.value).subscribe(data => {
-      console.log("User Data",data)
+      this.users = [data]
+      console.log("User Data", data)
     }, err => {
       console.log("Error Occurred", err)
     })

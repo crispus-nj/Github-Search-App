@@ -1,0 +1,27 @@
+img {
+    border-radius: 50%;
+    height: 23rem;
+    margin-top: 1rem;
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} 
+/* .followers {
+    display: flex;
+    justify-content: center;
+} */
+.name {
+    font-weight: bold;
+}
+.following {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 2rem;
+    font-size: 1.2rem;
+}
+span {
+    margin-left: auto;
+    margin-right: auto;
+}

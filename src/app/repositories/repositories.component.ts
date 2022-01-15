@@ -8,8 +8,10 @@ import { RespositoriesService } from '../services/respositories.services';
 })
 export class RepositoriesComponent implements OnInit {
 
+  repos: any = []
+
   constructor(
-    private repoService : RespositoriesService
+    private repoService: RespositoriesService
   ) { }
   @ViewChild('form') repo: ElementRef
   ngOnInit(): void {
@@ -17,9 +19,10 @@ export class RepositoriesComponent implements OnInit {
   onSubmit() {
     this.repo
   }
-  onSearchRepos(repoName: any){
+  onSearchRepos(repoName: any) {
     this.repoService.getRepos(repoName.value).subscribe(
       data => {
+        this.repos = [data]
         console.log("repo data", data)
       },
       err => {

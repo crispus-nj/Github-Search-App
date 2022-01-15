@@ -1,5 +1,31 @@
-<p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima animi ad nemo deserunt vel corporis vero mollitia tenetur rem, voluptatum, nesciunt qui hic est iusto quos eveniet, amet error laborum.
-</p>
+<div class="container-fluid bg-dark text-white mt-2">
+    <div class="row">
+        <div class="col-md-9 userdata" *ngIf="isFetching">
+            <ul *ngFor="let user of userData">
+                <div>
+                    <img src="{{user.avatar_url}}" alt="">
+                </div>
+                <div class="followers">
+                    <div class="following name">
+                        {{user.name | uppercase}} <br /> <br />
+                    </div>
+                    <div class="following">
+                        {{user.bio}} <br /> <br />
+                    </div>
+                    <div class="following">
+                        <div>followers: <i>{{user.followers}}</i></div>
+                        <div>following: <i>{{user.following}}</i></div>
+                        <div>public_repos: <i>{{user.public_repos}}</i></div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="col-md-3" *ngIf="!isFetching">
+            <div class="spinner-border mt-3" role="status">
+                <span class="sr-only"></span>
+            </div>
+        </div>
+    </div>
+</div>
 <app-users></app-users>
 <app-repositories></app-repositories>

@@ -21,7 +21,16 @@ ul {
     margin: 0 2rem;
     font-size: 1.2rem;
 }
+.repos {
+    margin-left: 1rem;
+    font-size: 1rem;
+}
 span {
     margin-left: auto;
     margin-right: auto;
+}
+.contaner-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

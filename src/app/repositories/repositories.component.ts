@@ -22,7 +22,7 @@ export class RepositoriesComponent implements OnInit {
   onSearchRepos(repoName: any) {
     this.repoService.getRepos(repoName.value).subscribe(
       data => {
-        this.repos = [data]
+        this.repos = data
         console.log("repo data", data)
       },
       err => {

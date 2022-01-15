@@ -2,3 +2,15 @@
     margin-left: auto;
     margin-right: auto;
 }
+#repos {
+    background-color: hsl(210, 36%, 96%)
+}
+.more {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+a {
+    text-decoration: none;
+    font-size: 1rem;
+}

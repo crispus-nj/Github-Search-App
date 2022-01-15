@@ -12,7 +12,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div class="card mt-3">
+            <div class="card shadow mt-3">
                 <div class="card-body">
                     <h4 class="card-title">{{users.name | uppercase}}</h4>
                     <div class="card-body-allbody">
@@ -25,6 +25,15 @@
                                 <li class="text-info">Followers: {{users.followers}} </li>
                                 <li class="text-info">Following: {{users.following}} </li>
                                 <li class="text-info">Public_Repos: {{users.public_repos}} </li>
+                            </div>
+                            <div class="userRepos">
+                                <h4 class="text-success">Repos:</h4>
+                                <div class="repos"> 
+                                    <ul *ngFor="let repo of userRepoData" style="display: inline-block;">
+                                        <a href="{{repo.clone_url}}" id="repos"
+                                            style="text-decoration: none;">{{repo.name}}</a> <br />
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -9,3 +9,55 @@
         </div>
     </div>
 </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h4 class="card-title">{{users.name | uppercase}}</h4>
+                    <div class="card-body-allbody">
+                        <div class="image">
+                            <img src="{{users.avatar_url}}" alt="">
+                        </div>
+                        <div class="card-all">
+                            <p class="card-body">{{users.bio}}</p>
+                            <div class="following">
+                                <li class="text-info">Followers: {{users.followers}} </li>
+                                <li class="text-info">Following: {{users.following}} </li>
+                                <li class="text-info">Public_Repos: {{users.public_repos}} </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <ul *ngFor="let user of userData">
+                <div class="contaner-data">
+                    <div class="image">
+                        <img src="{{user.avatar_url}}" alt="">
+                    </div>
+                </div> 
+                <div class="followers">
+                    <div class="following name">
+                        {{user.name | uppercase}} <br /> <br />
+                    </div>
+                    <div class="following">
+                        {{user.bio}} <br /> <br />
+                    </div>
+                    <div class="following">
+                        <div>followers: <i>{{user.followers}}</i></div>
+                        <div>following: <i>{{user.following}}</i></div>
+                        <div>public_repos: <i>{{user.public_repos}}</i></div>
+                    
+                    </div>
+                    <h4 class="following mt-3 text-center text-success" style="font-weight: bold;" >MY REPOSITORIES</h4>
+                    <div class="repos">
+                        <ul *ngFor = "let repos of myRepoData" style="display: inline-block;">
+                            <a href="{{repos.clone_url}}" id="repos" style="text-decoration: none;">{{repos.name}}</a> <br />
+                         </ul>
+                    </div>
+                    
+                </div>
+            </ul> -->

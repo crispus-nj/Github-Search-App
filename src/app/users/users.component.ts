@@ -21,7 +21,7 @@ export class UsersComponent implements OnInit {
   }
   getRepos(user: any) {
     this.userService.getUser(user.value).subscribe(data => {
-      this.users = [data]
+      this.users = data
       console.log("User Data", data)
     }, err => {
       console.log("Error Occurred", err)

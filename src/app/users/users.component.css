@@ -2,3 +2,23 @@
     margin-left: auto;
     margin-right: auto;
 }
+img {
+    border-radius: 50%;
+    height: 16rem;
+    margin-top: 1rem;
+}
+.card-body-allbody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-title {
+    float: right;
+}
+.following {
+    display: flex;
+    justify-content: space-around;
+}
+li {
+    list-style-type: none;
+}

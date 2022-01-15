@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-users',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersComponent implements OnInit {
 
+  @ViewChild('form') signup : ElementRef
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  onSubmit(){
+    console.log(this.signup) 
+  }
 }

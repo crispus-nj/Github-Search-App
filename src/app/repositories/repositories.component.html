@@ -1,1 +1,12 @@
-<p>repositories works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" id="form">
+            <form (ngSubmit)="onSubmit()" #form="ngForm">
+                <label for="name">Repo name</label>
+                <input type="text" class="form-control" name="name" ngModel required>
+                <button class="btn btn-info mt-2">Search Repo</button>
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-repositories',
@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class RepositoriesComponent implements OnInit {
 
   constructor() { }
-
+  @ViewChild('form') repo: ElementRef
   ngOnInit(): void {
   }
-
+  onSubmit() {
+    this.repo
+  }
 }

@@ -15,5 +15,9 @@ img {
 }
 a {
   font-size: 1.3rem;
-  color: rgb(48, 48, 248) !important;
+  /* color: rgb(48, 48, 248) !important; */
+
+}
+a:hover {
+  cursor: pointer;
 }

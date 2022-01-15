@@ -14,7 +14,7 @@ export class RespositoriesService {
     ) { }
 
     getRepos(username: string) {
-        this.http.get(environment.apiUrl + username + "/repos")
+      return this.http.get(environment.apiUrl + username + "/repos")
     }
 
 }

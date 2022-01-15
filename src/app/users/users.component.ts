@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { UsersService } from '../services/users-services';
 
 @Component({
   selector: 'app-users',
@@ -7,13 +8,22 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class UsersComponent implements OnInit {
 
-  @ViewChild('form') signup : ElementRef
+  @ViewChild('form') signup: ElementRef
 
-  constructor() { }
+  constructor(
+    private userService : UsersService
+  ) { }
 
   ngOnInit(): void {
   }
-  onSubmit(){
-    console.log(this.signup) 
+  onSubmit() {
+    // console.log(this.signup) 
+  }
+  getRepos(user: any) {
+    this.userService.getUser(user.value).subscribe(data => {
+      console.log("User Data",data)
+    }, err => {
+      console.log("Error Occurred", err)
+    })
   }
 }

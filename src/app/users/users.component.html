@@ -3,8 +3,8 @@
         <div class="col-md-4" id="form">
             <form (ngSubmit)="onSubmit()" #form="ngForm">
                 <label for="name">User Name</label>
-                <input type="text" class="form-control" name="name" ngModel required>
-                <button class="btn btn-primary mt-2">Search User</button>
+                <input type="text" class="form-control" name="name" ngModel required #name="ngModel">
+                <button class="btn btn-primary mt-2" (click)="getRepos(name)">Search User</button>
             </form>
         </div>
     </div>

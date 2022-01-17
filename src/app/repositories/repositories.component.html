@@ -27,6 +27,7 @@
         <div class="card-body">
           <h3 class="card-title text-dark">{{ rep.name }}</h3>
           <p class="card-text">{{ rep.description }}</p>
+          <p class="card-text"> Created on: <strong>{{rep.created_at | date}}</strong></p>
           <div class="more">
             <a href="{{ rep.clone_url }}">View repo</a>
             <p>

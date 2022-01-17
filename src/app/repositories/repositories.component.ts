@@ -9,7 +9,7 @@ import { RespositoriesService } from '../services/respositories.services';
 export class RepositoriesComponent implements OnInit {
 
   repos: any = []
-
+  error = null
   constructor(
     private repoService: RespositoriesService
   ) { }
@@ -26,6 +26,7 @@ export class RepositoriesComponent implements OnInit {
         console.log("repo data", data)
       },
       err => {
+        this.error = err.error.message
         console.log("Error from repos", err)
       }
     )

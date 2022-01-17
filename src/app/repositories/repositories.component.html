@@ -1,28 +1,40 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-4" id="form">
-            <form (ngSubmit)="onSubmit()" #form="ngForm">
-                <label for="name">Username</label>
-                <input type="text" placeholder="Enter a name and get a list of repos" class="form-control" name="name" ngModel required #name="ngModel">
-                <button class="btn btn-info mt-2" (click)="onSearchRepos(name)">Search User Repos</button>
-            </form>
-        </div>
+  <div class="row">
+    <div class="col-md-4" id="form">
+      <form (ngSubmit)="onSubmit()" #form="ngForm">
+        <label for="name">Username</label>
+        <input
+          type="text"
+          placeholder="Enter a name and get a list of repos"
+          class="form-control"
+          name="name"
+          ngModel
+          required
+          #name="ngModel"
+        />
+        <button class="btn btn-info mt-2" (click)="onSearchRepos(name)">
+          Search User Repos
+        </button>
+      </form>
     </div>
-</div>
-<div class="container-fluid" id="repos" >
-    <div class="row">
-        <div class="col-md-4 mt-3"*ngFor="let rep of repos">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title text-dark">{{rep.name}}</h3>
-                    <p class="card-text">{{rep.description}}</p>
-                    <div class="more">
-                        <a href="{{rep.clone_url}}">View repo</a>
-                        <p>Technologies Used: <strong>{{rep.topics}}</strong></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
 
+<div class="container-fluid" id="repos">
+  <div class="row">
+    <div class="col-md-4 mt-3" *ngFor="let rep of repos">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title text-dark">{{ rep.name }}</h3>
+          <p class="card-text">{{ rep.description }}</p>
+          <div class="more">
+            <a href="{{ rep.clone_url }}">View repo</a>
+            <p>
+              Technologies Used: <strong>{{ rep.topics }}</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

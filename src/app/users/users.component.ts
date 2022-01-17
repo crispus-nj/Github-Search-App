@@ -10,6 +10,7 @@ import { UsersService } from '../services/users-services';
 export class UsersComponent implements OnInit {
   users: any = []
   userRepoData: any = []
+  error = null
   @ViewChild('form') signup: ElementRef
 
   constructor(
@@ -27,6 +28,7 @@ export class UsersComponent implements OnInit {
       this.users = data
       // console.log("User Data", data)
     }, err => {
+      this.error = err.error.message
       // console.log("Error Occurred", err)
     })
 

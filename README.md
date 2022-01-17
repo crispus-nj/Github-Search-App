@@ -2,6 +2,25 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
+## Author: Crispus Njenga
+
+## Features
+1. Display my repo basic information upon loading of application
+2. Search user 
+3. Search user repos
+4. Diplay error messages in case they occur
+
+## Technologies Used
+* AngularJs
+* Bootstrap
+* Html
+* Css
+
+## Contacts
+1. Phone Number: 0729292992
+2. Email Address: njenga@gmail.com
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

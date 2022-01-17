@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http"
 
-import { environment } from "../../environments/environment"
+// import { environment } from "../../environments/environment"
+import { Environment } from "../environments/environments";
 
 @Injectable({
     providedIn: 'root'
@@ -14,7 +15,7 @@ export class RespositoriesService {
     ) { }
 
     getRepos(username: string) {
-      return this.http.get(environment.apiUrl + username + "/repos")
+      return this.http.get(Environment.apiUrl + username + "/repos")
     }
 
 }

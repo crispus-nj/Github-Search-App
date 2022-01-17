@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-4" id="form">
             <form (ngSubmit)="onSubmit()" #form="ngForm">
-                <label for="name">Repo name</label>
+                <label for="name">Username</label>
                 <input type="text" placeholder="Enter a name and get a list of repos" class="form-control" name="name" ngModel required #name="ngModel">
                 <button class="btn btn-info mt-2" (click)="onSearchRepos(name)">Search User Repos</button>
             </form>
